@@ -1,0 +1,288 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import setNestedObject from './JS/setNestedObject'
+
+const Form = () => {
+
+    const [qualification, setQualification] = React.useState([0])
+    const [workExperience, setWorkExperience] = React.useState([0])
+    const [technicalSkills, setTechnicalSkills] = React.useState([0])
+    const [softSkills, setSoftSkills] = React.useState([0])
+    const [languages, setLanguages] = React.useState([0])
+    const [certificate, setCertificate] = React.useState([0])
+    const [project, setProject] = React.useState([0])
+    const [hobbies, setHobbies] = React.useState([0])
+
+
+    const submitForm = (e) => {
+        e.preventDefault()
+
+        const formData = new FormData(e.target);
+        const data = {};
+
+        for (let [key, value] of formData.entries()) {
+            setNestedObject(data, key, value);
+        }
+
+        console.log(data);
+
+    }
+
+
+
+    return (
+        <div className='formResume'>
+            <h1 className='mb-4'> RESUME BUILDER </h1>
+            <form onSubmit={submitForm} autoComplete='off'>
+                <h4 className='text-center'>Personal Details :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td colSpan={2}>
+                                <h6 className="text-danger"> *If Middle Name add to First Name *</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="fName">First Name:</label></td>
+                            <td><input id="fName" name="fName" className='form-control' placeholder='Enter First Name' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="lName">Last Name:</label></td>
+                            <td><input id="lName" name="lName" className='form-control' placeholder='Enter Last Name' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="designation">Designation:</label></td>
+                            <td><input id="designation" name="designation" className='form-control' placeholder='Enter Designation' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="contact">Contact:</label></td>
+                            <td><input id="contact" name="contact" className='form-control' placeholder='Enter Contact' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="email">Email:</label></td>
+                            <td><input id="email" name="email" className='form-control' placeholder='Enter Email' /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <hr />
+                <h4 className='mt-5 text-center'>Links :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td className='w-25'><label htmlFor="github">Github</label></td>
+                            <td><input id="github" name="github" className='form-control' placeholder='Enter Github Profile Link' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="linkedin">Linkedin:</label></td>
+                            <td><input id="linkedin" name="linkedin" className='form-control' placeholder='Enter Linkedin' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="portfolio">Portfolio:</label></td>
+                            <td><input id="portfolio" name="portfolio" className='form-control' placeholder='Enter Portfolio Link' /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr />
+
+                <h4 className='mt-5 text-center'>Work Experience :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            workExperience.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Work Experience {index + 1}</td>
+                                        <td><input name={`workExperience[${index}][designation]`} className='form-control' placeholder='Enter Designation' /></td>
+                                        <td><input name={`workExperience[${index}][companyName]`} className='form-control' placeholder='Enter Company Name' /></td>
+                                        <td><input name={`workExperience[${index}][startDate]`} className='form-control' placeholder='Enter Start Date ' /></td>
+                                        <td><input name={`workExperience[${index}][endDate]`} className='form-control' placeholder='Enter Resign Date' /></td>
+                                        <td><textarea name={`workExperience[${index}][projectList]`} id="" rows={4} className='w-100 form-control' placeholder='Enter Projects List / use comma separator to  separate projects'></textarea></td>
+                                        <td><textarea name={`workExperience[${index}][responsibilities]`} id="" rows={4} className='w-100 form-control' placeholder='Enter Responsibilities / use comma separator to  separate responsibilities'></textarea></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setWorkExperience([...workExperience, workExperience.length])}>Add Work Experience</button>
+                    </tfoot>
+                </table>
+
+                <h4 className='mt-5 text-center'>Educational Qualification :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            qualification.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Qualification {index + 1}</td>
+                                        <td><input name={`qualification[${index}][degree]`} className='form-control' placeholder='Enter Qualification Degree  Eg. Graduation ,HS, etc' /></td>
+                                        <td><input name={`qualification[${index}][year]`} className='form-control' placeholder='Enter Year of Pass out' /></td>
+                                        <td><input name={`qualification[${index}][marks]`} className='form-control' placeholder='Enter Marks ' /></td>
+                                        <td><input name={`qualification[${index}][course]`} className='form-control' placeholder='Enter Course' /></td>
+                                        <td><input name={`qualification[${index}][institute]`} className='form-control' placeholder='Enter University / Board' /></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setQualification([...qualification, qualification.length])}>Add Qualification</button>
+                    </tfoot>
+                </table>
+
+
+                <h4 className='mt-5 text-center'>Technical Skills :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            technicalSkills.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Technical Skills {index + 1}</td>
+                                        <td><input name={`technicalSkills[${index}]`} className='form-control' placeholder='Enter Technical Skills' /></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setTechnicalSkills([...technicalSkills, technicalSkills.length])}>Add Technical Skills</button>
+                    </tfoot>
+                </table>
+
+                <h4 className='mt-5 text-center'>Soft Skills :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            softSkills.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Soft Skills {index + 1}</td>
+                                        <td><input name={`softSkills[${index}]`} className='form-control' placeholder='Enter Soft Skills ' /></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setSoftSkills([...softSkills, softSkills.length])}>Add Soft Skills</button>
+                    </tfoot>
+                </table>
+
+
+                <h4 className='mt-5 text-center'>Languages :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            languages.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Languages {index + 1}</td>
+                                        <td><input name={`languages[${index}]`} className='form-control' placeholder='Enter Languages You Speak' /></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setLanguages([...languages, languages.length])}>Add Languages</button>
+                    </tfoot>
+                </table>
+
+
+                <h4 className='mt-5 text-center'>Certificates (if any) :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            certificate.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Certificate {index + 1}</td>
+                                        <td><input name={`certificate[${index}][title]`} className='form-control' placeholder='Enter Certificate Title' /></td>
+                                        <td><input name={`certificate[${index}][startDate]`} className='form-control' placeholder='Enter Certificate Start Date' /></td>
+                                        <td><input name={`certificate[${index}][endDate]`} className='form-control' placeholder='Enter Certificate End Date' /></td>
+                                        <td><input name={`certificate[${index}][issuedBy]`} className='form-control' placeholder='Enter Certificate Issue Institute' /></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setCertificate([...certificate, certificate.length])}>Add Certificate</button>
+                    </tfoot>
+                </table>
+
+
+                <h4 className='mt-5 text-center'>Personal Projects / Achivements :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            project.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Projects {index + 1}</td>
+                                        <td><input name={`project[${index}][title]`} className='form-control' placeholder='Project Title' /></td>
+                                        <td><input name={`project[${index}][startDate]`} className='form-control' placeholder='Start Date' /></td>
+                                        <td><input name={`project[${index}][endDate]`} className='form-control' placeholder='End Date' /></td>
+                                        <td><input name={`project[${index}][liveLink]`} className='form-control' placeholder='Live Link(if any)' /></td>
+                                        <td><textarea name={`project[${index}][learnings]`} id="" rows={4} className='w-100 form-control' placeholder='Learning use comma to sepatate learnings'></textarea></td>
+                                        <td><textarea name={`project[${index}][techStacks]`} id="" rows={4} className='w-100 form-control' placeholder='Tech Stacks use comma to sepatate'></textarea></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setProject([...project, project.length])}>Add Projects</button>
+                    </tfoot>
+                </table>
+
+
+
+                <h4 className='mt-5 text-center'>Hobby :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        {
+                            hobbies.map((elm, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>Hobby {index + 1}</td>
+                                        <td><input name={`hobbies[${index}]`} className='form-control' placeholder='Enter Hobbies or interests' /></td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <button type="button" className='btn btn-success mb-5' onClick={() => setHobbies([...hobbies, hobbies.length])}>Add Hobbies</button>
+                    </tfoot>
+                </table>
+
+                <h4 className='mt-5 text-center'>Profile Summary :</h4>
+                <table className="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td className='w-25'>Profile Summary</td>
+                            <td><textarea name="profileSummary" id="" rows={7} className='w-100 form-control' placeholder='Enter Profile Summary'></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+
+
+                <Link to={`/template-listing`}>
+                    <input type="submit" className='btn btn-success w-100 py-3' value="Submit" />
+                </Link>
+            </form>
+        </div>
+    )
+}
+
+export default Form

@@ -1,0 +1,52 @@
+$color_1: #333;
+$color_2: #2c3e50;
+$color_3: #7f8c8d;
+$color_4: #fff;
+$font-family_1: Arial, sans-serif;
+$background-color_1: #fff;
+$background-color_2: #2c3e50;
+
+.template5 {
+	font-family: $font-family_1;
+	background-color: $background-color_1;
+	color: $color_1;
+
+	.name {
+		font-size: 2rem;
+		font-weight: bold;
+		color: $color_2;
+	}
+
+	.title {
+		color: $color_3;
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-title {
+		background-color: $background-color_2;
+		color: $color_4;
+		padding: 0.5rem;
+		font-weight: bold;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.info-item {
+		display: flex;
+		justify-content: space-between;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	ul {
+		padding-left: 1.5rem;
+	}
+
+	.certification-item {
+		margin-bottom: 0.5rem;
+	}
+
+}

@@ -1,0 +1,198 @@
+.template1 {
+
+	.nameHeader {
+		font-weight: 800;
+		font-size: 40px;
+	}
+
+	.designation {
+		font-weight: 700;
+		font-size: 25px;
+		color: gray;
+		;
+	}
+
+	.profileSummary {
+		font-weight: 600;
+		font-size: 16px;
+		text-align: justify;
+	}
+
+	.topRightDetails {
+		font-weight: 600;
+	}
+
+	.sectionHeader {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 700;
+		font-size: 30px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-top: #212121 3px solid;
+		border-bottom: #212121 3px solid;
+	}
+
+	.skillSmallHeader {
+		margin-bottom: 5px;
+		font-weight: 700;
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+
+	.experience {
+		.designation {
+			font-weight: 700;
+			font-size: 21px;
+			color: black;
+			text-transform: uppercase;
+		}
+
+		.companyName {
+			font-weight: 700;
+			font-size: 18px;
+			color: gray;
+			;
+			text-transform: capitalize;
+		}
+
+		.duration {
+			font-weight: 700;
+			font-size: 15px;
+			color: gray;
+			;
+			text-transform: capitalize;
+			font-style: italic;
+		}
+
+		.responsibilities {
+			.header {
+				margin-top: 20px;
+				font-weight: 700;
+				font-size: 20px;
+			}
+
+			ul {
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				font-size: 15px;
+			}
+		}
+
+		.projectWorked {
+			.header {
+				margin-top: 20px;
+				font-weight: 700;
+				font-size: 20px;
+			}
+
+			ul {
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				font-size: 15px;
+			}
+		}
+	}
+
+	.education {
+		.qualificationTitle {
+			font-weight: 700;
+			font-size: 21px;
+			color: black;
+			text-transform: uppercase;
+		}
+
+		.qualificationInstitute {
+			font-weight: 700;
+			font-size: 18px;
+			color: gray;
+			;
+			text-transform: capitalize;
+		}
+
+		.qualificationYear {
+			font-weight: 700;
+			font-size: 15px;
+			color: gray;
+			;
+			text-transform: capitalize;
+			font-style: italic;
+		}
+
+		.qualificationMarks {
+			font-weight: 700;
+			font-size: 15px;
+			color: gray;
+			;
+			text-transform: capitalize;
+			font-style: italic;
+		}
+	}
+
+	.certificateTitle {
+		font-weight: 700;
+		font-size: 21px;
+		color: black;
+		text-transform: uppercase;
+	}
+
+	.projectTitle {
+		font-weight: 700;
+		font-size: 21px;
+		color: black;
+		text-transform: uppercase;
+	}
+
+	.certificateYear {
+		font-weight: 700;
+		font-size: 18px;
+		color: gray;
+		;
+		text-transform: capitalize;
+	}
+
+	.certificateInstitute {
+		font-weight: 700;
+		font-size: 15px;
+		color: gray;
+		;
+		text-transform: capitalize;
+		font-style: italic;
+	}
+
+	.projectDuration {
+		font-weight: 700;
+		font-size: 15px;
+		color: gray;
+		;
+		text-transform: capitalize;
+		font-style: italic;
+	}
+
+	.projectTechStacks {
+		.header {
+			margin-top: 20px;
+			font-weight: 700;
+			font-size: 20px;
+		}
+
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		font-size: 15px;
+	}
+
+	.projectLearnings {
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		font-size: 15px;
+	}
+
+	.itemContainer {
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+}

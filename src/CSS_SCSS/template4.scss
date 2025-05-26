@@ -1,0 +1,73 @@
+$color_1: #333;
+$color_2: #6c757d;
+$color_3: #dc3545;
+$font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$background-color_1: #dee2e6;
+
+.template4 {
+	font-family: $font-family_1;
+	background: #fff;
+	color: $color_1;
+
+	.section-title {
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		position: relative;
+		padding-left: 30px;
+
+		&::before {
+			content: "\25C7";
+			position: absolute;
+			left: 0;
+			color: $color_2;
+		}
+	}
+
+	.sub-section {
+		border-left: 3px solid #e4e4e4;
+		padding-left: 1rem;
+	}
+
+	.contact-icons {
+		i {
+			font-size: 1rem;
+			margin-right: 10px;
+			color: $color_3;
+		}
+	}
+
+	.contact-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	}
+
+	.skills {
+		span {
+			display: inline-block;
+			background-color: $background-color_1;
+			color: $color_1;
+			padding: 5px 10px;
+			border-radius: 20px;
+			margin: 5px;
+			font-size: 0.85rem;
+		}
+	}
+
+	.job-title {
+		font-weight: 600;
+	}
+
+	.job-company {
+		font-style: italic;
+	}
+
+	.job-dates {
+		color: $color_3;
+		font-size: 0.9rem;
+	}
+
+}

@@ -1,0 +1,10 @@
+.items {
+    padding: 10px 30px;
+    background-color: #adb5bd;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+    min-width: 100px;
+    height: max-content;
+}

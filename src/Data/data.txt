@@ -1,0 +1,44 @@
+const data = {
+  certificate: [
+    { title: "", startDate: "", endDate: "", issuedBy: "" },
+    { title: "", startDate: "", endDate: "", issuedBy: "" },
+  ],
+  contact: "",
+  email: "",
+  fName: "",
+  github: "",
+  hobbies: ["", ""],
+  lName: "",
+  languages: ["", ""],
+  linkedin: "",
+  portfolio: "",
+  profileSummary: "",
+  project: [
+    { title: "", startDate: "", endDate: "", liveLink: "", learnings: "" },
+    { title: "", startDate: "", endDate: "", liveLink: "", learnings: "" },
+  ],
+  qualification: [
+    { degree: "", year: "", marks: "", course: "", institute: "" },
+    { degree: "", year: "", marks: "", course: "", institute: "" },
+  ],
+  softSkills: ["", ""],
+  technicalSkills: ["", ""],
+  workExperience: [
+    {
+      companyName: "",
+      designation: "",
+      endDate: "",
+      projectList: "",
+      responsibilities: "",
+      startDate: "",
+    },
+    {
+      companyName: "",
+      designation: "",
+      endDate: "",
+      projectList: "",
+      responsibilities: "",
+      startDate: "",
+    },
+  ],
+};

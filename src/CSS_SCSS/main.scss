@@ -1,0 +1,37 @@
+.formResume {
+  table td {
+    vertical-align: middle;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  tr>td {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  input,
+  textarea {
+    font-weight: 600;
+  }
+
+  ::placeholder {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+
+}
+
+.template1,
+.template2,
+.template3,
+.template4,
+.template5,
+.template6,
+.template7 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 50px;
+}
