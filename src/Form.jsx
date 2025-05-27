@@ -1,6 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import setNestedObject from './JS/setNestedObject'
+import UserContext from './Context/userContext'
 
 const Form = () => {
 
@@ -13,6 +14,8 @@ const Form = () => {
     const [project, setProject] = React.useState([0])
     const [hobbies, setHobbies] = React.useState([0])
 
+    const { setUserData } = useContext(UserContext)
+    const navigate = useNavigate();
 
     const submitForm = (e) => {
         e.preventDefault()
@@ -23,9 +26,9 @@ const Form = () => {
         for (let [key, value] of formData.entries()) {
             setNestedObject(data, key, value);
         }
-
         console.log(data);
-
+        setUserData(data);
+        navigate('/template-listing');
     }
 
 
@@ -61,6 +64,10 @@ const Form = () => {
                         <tr>
                             <td className='w-25'><label htmlFor="email">Email:</label></td>
                             <td><input id="email" name="email" className='form-control' placeholder='Enter Email' /></td>
+                        </tr>
+                        <tr>
+                            <td className='w-25'><label htmlFor="address">Address:</label></td>
+                            <td><textarea id="address" name="address" className='form-control w-100' placeholder='Enter Address' rows={4} ></textarea></td>
                         </tr>
                     </tbody>
                 </table>
@@ -272,14 +279,8 @@ const Form = () => {
                 </table>
 
 
+                <input type="submit" className='btn btn-success w-100 py-3' value="Submit" />
 
-
-
-
-
-                <Link to={`/template-listing`}>
-                    <input type="submit" className='btn btn-success w-100 py-3' value="Submit" />
-                </Link>
             </form>
         </div>
     )
