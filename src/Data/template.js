@@ -25,8 +25,8 @@ export const templates = [
     templateUrl: "template5",
   },
   {
-    templateTitle: "Template 6 (Without Image)",
-    templateImage: "template6.png",
+    templateTitle: "Template 6",
+    templateImage: "template6.jpeg",
     templateUrl: "template6",
   },
   {

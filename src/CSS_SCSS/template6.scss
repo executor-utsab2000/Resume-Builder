@@ -2,93 +2,88 @@ $color_1: #333;
 $font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .template6 {
-	.contact {
-		margin-top: 10px;
+
+	.top-section {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 20px;
+		gap: 20px;
+	}
+
+	.left-header h1 {
+		margin: 0;
+		font-size: 32px;
+	}
+
+	.left-header .title {
+		font-size: 20px;
+		color: #666;
+	}
+
+	.right-header p {
+		margin: 3px 0;
 		font-size: 14px;
 	}
 
-	h1 {
-		margin: 0;
+	.summary {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-size: 16px;
+		margin-bottom: 20px;
+		line-height: 1.5;
+		border-bottom: 2px solid #333;
+	}
+
+	main.content {
+		display: flex;
+		gap: 40px;
+	}
+
+	.left,
+	.right {
+		flex: 1;
 	}
 
 	h2 {
 		border-bottom: 2px solid #ddd;
 		padding-bottom: 5px;
-		margin-top: 40px;
-	}
-
-	.section {
-		margin-bottom: 30px;
-	}
-
-	.experience {
 		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 
-	.education {
-		margin-top: 20px;
+	h3 {
+		margin: 0;
+		font-size: 20px;
 	}
 
-	.experience-item {
-		margin-bottom: 20px;
-	}
-
-	.education-item {
-		margin-bottom: 20px;
-	}
-
-	.skills {
-		display: inline-block;
-		width: 45%;
-		vertical-align: top;
-		margin: 20px 2.5%;
-	}
-
-	.certificates {
-		display: inline-block;
-		width: 45%;
-		vertical-align: top;
-		margin: 20px 2.5%;
-	}
-
-	.memberships {
-		display: inline-block;
-		width: 45%;
-		vertical-align: top;
-		margin: 20px 2.5%;
-	}
-
-	.languages {
-		display: inline-block;
-		width: 45%;
-		vertical-align: top;
-		margin: 20px 2.5%;
-	}
-
-	.interests {
-		display: inline-block;
-		width: 45%;
-		vertical-align: top;
-		margin: 20px 2.5%;
+	.company {
+		font-style: italic;
+		font-size: 14px;
+		margin-bottom: 5px;
 	}
 
 	ul {
+		list-style-type: disc;
 		padding-left: 20px;
 	}
 
-	.lang-level {
-		span {
-			display: inline-block;
-			width: 10px;
-			height: 10px;
-			margin-right: 5px;
-			border-radius: 50%;
-			background: #000;
-		}
-
-		span.inactive {
-			background: #ccc;
-		}
+	ul.skills,
+	ul.certificates,
+	ul.memberships,
+	ul.languages,
+	ul.hobbies {
+		list-style-type: none;
+		padding-left: 0;
 	}
+
+	ul.skills li,
+	ul.certificates li,
+	ul.memberships li,
+	ul.languages li,
+	ul.hobbies li {
+		margin-bottom: 5px;
+	}
+
 
 }
