@@ -11,89 +11,123 @@ const Template7 = () => {
             <div className='container resume template7'>
                 <div>
                     <header>
-                        <h1>First Last</h1>
-                        <p>Bay Area, California • +1-234-456-789 • professionalemail@resumeworded.com • linkedin.com/in/username</p>
+                        <h1>{userData.fName + " " + userData.lName}</h1>
+                        <p>{userData.address} • {userData.contact} • {userData.email} • {userData.linkedin}</p>
+                        <h6 className='my-5'>{userData.profileSummary}</h6>
                     </header>
 
                     <section className="section">
                         <h2>PROFESSIONAL EXPERIENCE</h2>
 
-                        <div className="job">
-                            <div className="job-header">
-                                <h3>Resume Worded</h3>
-                                <span>New York, NY</span>
-                                <span className="date">Jun 2018 – Present</span>
-                            </div>
-                            <p><strong>Human Resources Manager</strong></p>
-                            <ul>
-                                <li>Structured and implemented programs and policies in training, compensation, benefits, and onboarding, saving over 70% in recruiting costs.</li>
-                                <li>Led HR strategy for 150+ franchises, generating over $40 million in revenue.</li>
-                                <li>Oversaw company reorganization: closed 20 franchises and 65+ job cuts.</li>
-                            </ul>
-                        </div>
+                        {
+                            userData.workExperience.map((elm) => {
+                                return (
+                                    <div className="job">
+                                        <div className="job-header">
+                                            <h3 className='text-capitalize'>{elm.companyName}</h3>
+                                            <span className="date">{`${elm.startDate} - Present`}</span>
+                                        </div>
+                                        <p><strong>{elm.designation}</strong></p>
+                                        <ul>
+                                            {
+                                                elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                            }
+                                        </ul>
+                                    </div>
+                                )
+                            })
+                        }
 
-                        <div className="job">
-                            <div className="job-header">
-                                <h3>Second Company</h3>
-                                <span>New York, NY</span>
-                                <span className="date">Jan 2015 – May 2018</span>
-                            </div>
-                            <p><strong>Human Resources Manager</strong></p>
-                            <ul>
-                                <li>Implemented employee referral program, reducing cost per hire by 35%.</li>
-                                <li>Managed benefits for 350+ employees across 7 departments.</li>
-                                <li>Ensured 100% compliance with federal/state regulations (EEO, ADA, FMLA, HIPAA).</li>
-                            </ul>
-                        </div>
+                    </section>
 
-                        <div className="job">
-                            <div className="job-header">
-                                <h3>Third Company</h3>
-                                <span>San Diego, CA</span>
-                                <span className="date">May 2008 – Dec 2014</span>
-                            </div>
+                    <section className="section">
+                        <h2>PROJECTS</h2>
 
-                            <p><strong>Assistant Human Resources Manager (Nov 2011 – Dec 2014)</strong></p>
-                            <ul>
-                                <li>Promoted within 18 months due to performance and impact.</li>
-                                <li>Improved retention rate to over 80% by enhancing work environment.</li>
-                                <li>Planned 30+ training sessions for 300+ employees across 6 offices.</li>
-                            </ul>
+                        {
+                            userData.project.map((elm) => {
+                                return (
+                                    <div className="job">
+                                        <div className="job-header">
+                                            <h3 className='text-capitalize'>{elm.title}</h3>
+                                            <span className="date">{`${elm.startDate} - ${elm.endDate}`}</span>
+                                        </div>
+                                        <div className="d-flex ">
+                                            <ul className='pe-5'>
+                                                {
+                                                    elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                                }
+                                            </ul>
+                                            <ul className='ps-5'>
+                                                {
+                                                    elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
 
-                            <p><strong>Human Resources Coordinator (May 2010 – Oct 2011)</strong></p>
-                            <ul>
-                                <li>Conducted phone interviews for 30+ roles.</li>
-                                <li>Cut complaints/turnover by 50% through open-door policy and corrective actions.</li>
-                                <li>Trained 15+ recruits on onboarding and orientation.</li>
-                            </ul>
-
-                            <p><strong>Human Resources Assistant (May 2008 – May 2010)</strong></p>
-                            <ul>
-                                <li>Screened and recruited 100+ candidates, hiring 40+ over 2 years.</li>
-                                <li>Maintained employee records and assignments.</li>
-                            </ul>
-                        </div>
                     </section>
 
                     <section className="section">
                         <h2>EDUCATION</h2>
-                        <div className="job-header">
-                            <h3>Resume Worded University</h3>
-                            <span>San Francisco, CA</span>
-                            <span className="date">May 2010</span>
-                        </div>
-                        <p>Bachelor of Science in Human Resource Management.</p>
+                        {
+                            userData.qualification.map((elm) => {
+                                return (
+                                    <>
+                                        <div className="job-header">
+                                            <h3>{elm.institute}</h3>
+                                            <span className="date">{elm.year}</span>
+                                        </div>
+                                        <p>{elm.degree}</p>
+                                    </>
+                                )
+                            })
+                        }
+                    </section>
+
+                    <section className="section">
+                        <h2>CERTIFICATES</h2>
+                        {
+                            userData.certificate.map((elm) => {
+                                return (
+                                    <>
+                                        <div className="job-header">
+                                            <h3>{elm.title}</h3>
+                                            <span className="date">{`${elm.startDate} - ${elm.endDate}`}</span>
+                                        </div>
+                                        <p className='text-muted'>({elm.issuedBy})</p>
+                                    </>
+                                )
+                            })
+                        }
                     </section>
 
                     <section className="section">
                         <h2>SKILLS</h2>
                         <ul className="skills">
-                            <li>ADP Workforce Now</li>
-                            <li>PurelyHR</li>
-                            <li>Oracle Taleo</li>
-                            <li>MS Office Suite</li>
-                            <li>iCIMS Talent Acquisition</li>
-                            <li>Human Resources Management Software (HRMS)</li>
+                            {
+                                userData.technicalSkills?.map(elm => <li>{elm}</li>)
+                            }
+                        </ul>
+                    </section>
+
+                    <section className="section">
+                        <h2>SOFT SKILLS</h2>
+                        <ul className="skills">
+                            {
+                                userData.softSkills?.map(elm => <li>{elm}</li>)
+                            }
+                        </ul>
+                    </section>
+
+                    <section className="section">
+                        <h2>HOBBIES</h2>
+                        <ul className="skills">
+                            {
+                                userData.hobbies?.map(elm => <li>{elm}</li>)
+                            }
                         </ul>
                     </section>
                 </div>

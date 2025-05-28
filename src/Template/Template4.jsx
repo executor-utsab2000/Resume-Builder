@@ -58,8 +58,30 @@ const Template4 = () => {
                             )
                         })
                     }
+                </div>
 
-
+                <div className="section-title">Projects</div>
+                <div className="sub-section mb-3">
+                    {
+                        userData.project.map((elm) => {
+                            return (
+                                <>
+                                    <div className="job-title">{elm.title}</div>
+                                    <div className="skills">
+                                        {
+                                            elm.techStacks.split(',')?.map(elm => <span>{elm}</span>)
+                                        }
+                                    </div>
+                                    <div className="job-dates">{`${elm.startDate} - ${elm.endDate}`}</div>
+                                    <ul>
+                                        {
+                                            elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                        }
+                                    </ul>
+                                </>
+                            )
+                        })
+                    }
                 </div>
 
                 <div className="section-title">Education</div>
@@ -71,6 +93,21 @@ const Template4 = () => {
                                     <strong>{elm.degree}</strong><br />
                                     {elm.institute}<br />
                                     <small className="text-danger">{elm.year}</small>
+                                </div>
+                            </>
+                        )
+                    })
+                }
+
+                <div className="section-title">Certificates</div>
+                {
+                    userData.certificate.map((elm) => {
+                        return (
+                            <>
+                                <div className="sub-section mb-2">
+                                    <strong>{elm.title}</strong><br />
+                                    {elm.issuedBy}<br />
+                                    <small className="text-danger">{`${elm.startDate} - ${elm.endDate}`}</small>
                                 </div>
                             </>
                         )

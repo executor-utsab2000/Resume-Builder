@@ -150,9 +150,6 @@ const Template1 = () => {
                                     <div className="row">
                                         <div className="col-10 my-auto">
                                             <div className="certificateTitle">{elm.title}</div>
-                                            <div className="certificateYear">{`${elm.startDate} - ${elm.endDate}`}</div>
-                                        </div>
-                                        <div className="col-2 text-end my-auto">
                                             <div className="certificateInstitute">{elm.issuedBy}</div>
                                         </div>
                                     </div>

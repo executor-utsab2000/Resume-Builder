@@ -4,8 +4,8 @@ import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 
 const Template2 = () => {
-    const { userData } =useContext(UserContext)
-    
+    const { userData } = useContext(UserContext)
+
     return (
         <>
             <div className="container template2">
@@ -50,6 +50,29 @@ const Template2 = () => {
                     })
                 }
 
+                <div className="section-title">Personal Projects</div>
+                {
+                    userData.project?.map((elm) => {
+                        return (
+                            <div>
+                                <h5>{elm.title} -  <span className="text-muted small">({`${elm.startDate} - ${elm.endDate}`})</span></h5>
+                                <div className="d-flex  ">
+                                    <ul className='pe-5'>
+                                        {
+                                            elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                        }
+                                    </ul>
+                                    <ul className='ps-5'>
+                                        {
+                                            elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+
 
 
                 <div className="section-title">Education</div>
@@ -61,7 +84,20 @@ const Template2 = () => {
                         )
                     })
                 }
+
+
+                <div className="section-title">Certificates</div>
+                {
+                    userData.certificate.map((elm) => {
+                        return (
+                            <p><strong>{elm.title}</strong><br />
+                                {elm.issuedBy} <span className="text-muted ps-3">{`${elm.startDate} - ${elm.endDate}`}</span></p>
+                        )
+                    })
+                }
             </div>
+
+
         </>
     )
 }

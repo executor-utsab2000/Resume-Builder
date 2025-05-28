@@ -48,6 +48,30 @@ const Template6 = () => {
                             })
                         }
 
+                        <h2>Projects</h2>
+                        {
+                            userData.project.map((elm) => {
+                                return (
+                                    <div class="job">
+                                        <h3>{elm.title}</h3>
+                                        <p> {`${elm.startDate} - ${elm.endDate}`}</p>
+                                        <div className="d-flex  ">
+                                            <ul className='pe-5'>
+                                                {
+                                                    elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                                }
+                                            </ul>
+                                            <ul className='ps-5'>
+                                                {
+                                                    elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+
 
                         <h2>Education</h2>
                         {

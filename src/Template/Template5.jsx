@@ -47,7 +47,31 @@ const Template5 = () => {
                                     {
                                         elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
                                     }
-                                </ul></>
+                                </ul>
+                            </>
+                        )
+                    })
+                }
+
+                <div className="section-title">PROJECTS</div>
+                {
+                    userData.project.map((elm) => {
+                        return (
+                            <>
+                                <p><strong>{elm.title}</strong> - <span className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</span></p>
+                                <div className="d-flex  ">
+                                    <ul className='pe-5'>
+                                        {
+                                            elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                        }
+                                    </ul>
+                                    <ul className='ps-5'>
+                                        {
+                                            elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
+                                        }
+                                    </ul>
+                                </div>
+                            </>
                         )
                     })
                 }
