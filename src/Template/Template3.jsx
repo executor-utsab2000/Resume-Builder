@@ -1,5 +1,5 @@
 import '../CSS_SCSS/template3.scss'
-import UserContext from '../Context/userContext';
+import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 
 const Template3 = () => {

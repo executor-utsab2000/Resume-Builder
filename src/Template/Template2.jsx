@@ -1,6 +1,6 @@
 import SmallItems from '../Components/SmallItems';
 import '../CSS_SCSS/template2.scss'
-import UserContext from '../Context/userContext';
+import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 
 const Template2 = () => {

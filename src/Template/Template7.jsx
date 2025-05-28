@@ -1,11 +1,11 @@
 import '../CSS_SCSS/template7.scss'
-import UserContext from '../Context/userContext';
+import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 
 
 const Template7 = () => {
-    const { userData } =useContext(UserContext)
-    
+    const { userData } = useContext(UserContext)
+
     return (
         <>
             <div className='container resume template7'>

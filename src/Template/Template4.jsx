@@ -1,5 +1,5 @@
 import '../CSS_SCSS/template4.scss'
-import UserContext from '../Context/userContext';
+import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 
 
