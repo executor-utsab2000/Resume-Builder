@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import setNestedObject from './JS/setNestedObject'
 import UserContext from './Context/UserContext'
+import { useEffect } from 'react'
 
 const Form = () => {
 
@@ -30,13 +31,6 @@ const Form = () => {
         setUserData(data);
         navigate('/template-listing');
     }
-
-
-
-
-
-
-
     return (
         <div className='formResume'>
             <h1 className='mb-4'> RESUME BUILDER </h1>
@@ -108,9 +102,7 @@ const Form = () => {
                             <>
                                 <div className="experienceItems">
                                     <div className="row">
-                                        <div className="col-12 fw-bold mb-1">
-                                            Work Experience {index + 1} 
-                                            </div>
+                                        <div className="col-12 fw-bold mb-1">Work Experience {index + 1}</div>
                                         <div className="col-lg-2 my-auto"><input name={`workExperience[${index}][designation]`} className='form-control' placeholder='Enter Designation' /></div>
                                         <div className="col-lg-2 my-auto"><input name={`workExperience[${index}][companyName]`} className='form-control' placeholder='Enter Company Name' /></div>
                                         <div className="col-lg-2 my-auto"><input name={`workExperience[${index}][startDate]`} className='form-control' placeholder='Enter Start Date ' /></div>
@@ -122,7 +114,7 @@ const Form = () => {
                             </>
                         )
                     })}
-                    <button type="button" className='btn btn-success mb-5' onClick={() => setWorkExperience([...workExperience, workExperience.length])}>Add Work Experience</button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setWorkExperience([...workExperience, workExperience.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
                 <section>
@@ -145,7 +137,7 @@ const Form = () => {
                             )
                         })
                     }
-                    <button type="button" className='btn btn-success mb-5' onClick={() => setQualification([...qualification, qualification.length])}>Add Qualification</button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setQualification([...qualification, qualification.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -164,10 +156,8 @@ const Form = () => {
                                 })
                             }
                         </tbody>
-                        <tfoot>
-                            <button type="button" className='btn btn-success mb-5' onClick={() => setTechnicalSkills([...technicalSkills, technicalSkills.length])}>Add Technical Skills</button>
-                        </tfoot>
                     </table>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setTechnicalSkills([...technicalSkills, technicalSkills.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -186,10 +176,8 @@ const Form = () => {
                                 })
                             }
                         </tbody>
-                        <tfoot>
-                            <button type="button" className='btn btn-success mb-5' onClick={() => setSoftSkills([...softSkills, softSkills.length])}>Add Soft Skills</button>
-                        </tfoot>
                     </table>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setSoftSkills([...softSkills, softSkills.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -208,10 +196,8 @@ const Form = () => {
                                 })
                             }
                         </tbody>
-                        <tfoot>
-                            <button type="button" className='btn btn-success mb-5' onClick={() => setLanguages([...languages, languages.length])}>Add Languages</button>
-                        </tfoot>
                     </table>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setLanguages([...languages, languages.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -232,7 +218,7 @@ const Form = () => {
                             )
                         })
                     }
-                    <button type="button" className='btn btn-success mb-5' onClick={() => setCertificate([...certificate, certificate.length])}>Add Certificate</button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setCertificate([...certificate, certificate.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -255,7 +241,7 @@ const Form = () => {
                             )
                         })
                     }
-                    <button type="button" className='btn btn-success mb-5' onClick={() => setProject([...project, project.length])}>Add Projects</button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setProject([...project, project.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -275,10 +261,8 @@ const Form = () => {
                                 })
                             }
                         </tbody>
-                        <tfoot>
-                            <button type="button" className='btn btn-success mb-5' onClick={() => setHobbies([...hobbies, hobbies.length])}>Add Hobbies</button>
-                        </tfoot>
                     </table>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setHobbies([...hobbies, hobbies.length])}><i class="fa-solid fa-plus"></i></button>
                 </section>
 
                 <section>
