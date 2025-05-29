@@ -71,8 +71,7 @@ const Form = () => {
                         </tbody>
                     </table>
                 </section>
-                <br />
-                <hr />
+
                 <section>
                     <h4 className='mt-5 text-center'>Links :</h4>
                     <table className="table table-striped">
@@ -93,7 +92,7 @@ const Form = () => {
                     </table>
                 </section>
 
-                <hr />
+          
 
                 <section>
                     <h4 className='mt-5 text-center'>Work Experience :</h4>

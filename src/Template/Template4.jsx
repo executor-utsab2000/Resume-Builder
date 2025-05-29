@@ -1,16 +1,22 @@
 import '../CSS_SCSS/template4.scss'
 import UserContext from '../Context/UserContext';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
+import { handleDownloadPdf } from '../JS/handleDownloadPdf';
 
 
 const Template4 = () => {
 
     const { userData } = useContext(UserContext)
+    const printContent = useRef(null)
 
 
     return (
         <>
-            <div className="container py-4 template4">
+            <div className="printBtnDiv">
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+            </div>
+
+            <div className="container py-4 template4" ref={printContent}>
                 <div className="text-start">
                     <h2 className="fw-bold">{userData.fName + " " + userData.lName}</h2>
                     <h6 className="text-danger">{userData.designation}</h6>

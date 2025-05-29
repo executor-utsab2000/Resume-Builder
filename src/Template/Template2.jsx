@@ -1,14 +1,20 @@
 import SmallItems from '../Components/SmallItems';
 import '../CSS_SCSS/template2.scss'
 import UserContext from '../Context/UserContext';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
+import { handleDownloadPdf } from '../JS/handleDownloadPdf';
 
 const Template2 = () => {
     const { userData } = useContext(UserContext)
+    const printContent = useRef(null)
 
     return (
         <>
-            <div className="container template2">
+            <div className="printBtnDiv">
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+            </div>
+
+            <div className="container template2" ref={printContent}>
                 <div className="text-center">
                     <h1>{userData.fName + " " + userData.lName}</h1>
                     <h5 className="text-danger">{userData.designation}</h5>
@@ -39,7 +45,7 @@ const Template2 = () => {
                     userData.workExperience.map((elm) => {
                         return (
                             <div>
-                                <h5>{elm.designation} - <span className='text-capitalize'>{elm.companyName}</span> <span className="text-muted small">({`${elm.startDate} - ${elm.endDate}`})</span></h5>
+                                <h5>{elm.designation} - <span className='text-capitalize'>{elm.companyName}</span> <span className="text-muted small">({`${elm.startDate} - Present`})</span></h5>
                                 <ul>
                                     {
                                         elm.responsibilities.split(',').map(elm => <li>{elm}</li>)

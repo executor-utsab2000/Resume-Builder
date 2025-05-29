@@ -1,16 +1,21 @@
 import '../CSS_SCSS/template6.scss'
 import UserContext from '../Context/UserContext';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
+import { handleDownloadPdf } from '../JS/handleDownloadPdf';
 
 const Template6 = () => {
 
     const { userData } = useContext(UserContext)
+    const printContent = useRef(null)
 
 
     return (
         <>
+            <div className="printBtnDiv">
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+            </div>
 
-            <div class="container template6">
+            <div class="container template6" ref={printContent}>
                 <header class="top-section">
                     <div class="left-header">
                         <h1>{userData.fName + " " + userData.lName}</h1>

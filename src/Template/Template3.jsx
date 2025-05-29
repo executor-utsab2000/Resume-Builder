@@ -1,15 +1,20 @@
 import '../CSS_SCSS/template3.scss'
 import UserContext from '../Context/UserContext';
-import { useContext } from 'react';
-
+import { useContext, useRef } from 'react';
+import { handleDownloadPdf } from '../JS/handleDownloadPdf';
 const Template3 = () => {
     const { userData } = useContext(UserContext)
+    const printContent = useRef(null)
 
 
 
     return (
         <>
-            <div className="container py-5 template3">
+            <div className="printBtnDiv">
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+            </div>
+
+            <div className="container py-5 template3" ref={printContent}>
                 <div className="row">
 
                     <div className="col-md-4 left-section">
@@ -68,12 +73,12 @@ const Template3 = () => {
                             userData.project.map((elm) => {
                                 return (
                                     <div className="work-item">
-                                        <h5>{elm.title} - 
+                                        <h5>{elm.title} -
                                             <small className="text-muted">(
                                                 {
                                                     elm.techStacks.split(',')?.map(elm => `${elm} , `)
                                                 }
-                                            )</small>
+                                                )</small>
                                         </h5>
                                         <small className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</small>
                                         <ul>
