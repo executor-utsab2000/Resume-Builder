@@ -106,7 +106,7 @@ const Template1 = () => {
                                                     <div className="col-3 my-auto">
                                                         <div className="companyName">{elm.designation}</div>
                                                         <div className="designation">{elm.companyName}</div>
-                                                        <div className="duration">{`${elm.startDate} - Present`}</div>
+                                                        <div className="duration">{`${elm.startDate} - ${elm.endDate}`}</div>
 
                                                         <div className="projectWorked">
                                                             <div className="header">Projects :</div>

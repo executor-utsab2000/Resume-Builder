@@ -48,7 +48,7 @@ const Template4 = () => {
                                 <>
                                     <div className="job-title">{elm.designation}</div>
                                     <div className="job-company">{elm.companyName}</div>
-                                    <div className="job-dates">{`${elm.startDate} - Present`}</div>
+                                    <div className="job-dates">{`${elm.startDate} - ${elm.endDate}`}</div>
                                     <ul>
                                         {
                                             elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)

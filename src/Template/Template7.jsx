@@ -25,7 +25,7 @@ const Template7 = () => {
                                     <div className="job">
                                         <div className="job-header">
                                             <h3 className='text-capitalize'>{elm.companyName}</h3>
-                                            <span className="date">{`${elm.startDate} - Present`}</span>
+                                            <span className="date">{`${elm.startDate} - ${elm.endDate}`}</span>
                                         </div>
                                         <p><strong>{elm.designation}</strong></p>
                                         <ul>

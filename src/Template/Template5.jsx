@@ -42,7 +42,7 @@ const Template5 = () => {
                     userData.workExperience.map((elm) => {
                         return (
                             <>
-                                <p><strong>{elm.designation}</strong> - <span className='text-capitalize'>{elm.companyName}</span> <span className="text-muted">{`${elm.startDate} - Present`}</span></p>
+                                <p><strong>{elm.designation}</strong> - <span className='text-capitalize'>{elm.companyName}</span> <span className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</span></p>
                                 <ul>
                                     {
                                         elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)

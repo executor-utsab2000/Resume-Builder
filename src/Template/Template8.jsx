@@ -23,7 +23,7 @@ const Template8 = () => {
                                     <div className="job">
                                         <div className="title">
                                             <strong>{elm.designation}</strong>
-                                            <span>{`${elm.startDate} - Present`}</span>
+                                            <span>{`${elm.startDate} - ${elm.endDate}`}</span>
                                         </div>
                                         <div class="company">{elm.companyName}</div>
                                         <ul>

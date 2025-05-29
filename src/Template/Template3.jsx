@@ -50,7 +50,7 @@ const Template3 = () => {
                                 return (
                                     <div className="work-item">
                                         <h5>{elm.designation}, <span className='text-capitalize' >{elm.companyName}</span></h5>
-                                        <small className="text-muted">{`${elm.startDate} - Present`}</small>
+                                        <small className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</small>
                                         <ul>
                                             {
                                                 elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)

@@ -37,7 +37,7 @@ const Template6 = () => {
                                 return (
                                     <div class="job">
                                         <h3>{elm.designation}</h3>
-                                        <p class="company text-capitalize">{elm.companyName} <span>{`${elm.startDate} - Present`}</span></p>
+                                        <p class="company text-capitalize">{elm.companyName} <span>{`${elm.startDate} - ${elm.endDate}`}</span></p>
                                         <ul>
                                             {
                                                 elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
