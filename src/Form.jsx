@@ -46,28 +46,28 @@ const Form = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td className='w-25'><label htmlFor="fName">First Name:</label></td>
-                            <td><input id="fName" name="fName" className='form-control' placeholder='Enter First Name' /></td>
+                            <td className='w-25'><label htmlFor="fName">First Name: <span className="fw-bold text-danger">*</span></label></td>
+                            <td><input id="fName" name="fName" className='form-control mandetory' placeholder='Enter First Name' required /></td>
                         </tr>
                         <tr>
-                            <td className='w-25'><label htmlFor="lName">Last Name:</label></td>
-                            <td><input id="lName" name="lName" className='form-control' placeholder='Enter Last Name' /></td>
+                            <td className='w-25'><label htmlFor="lName">Last Name: <span className="fw-bold text-danger">*</span></label></td>
+                            <td><input id="lName" name="lName" className='form-control mandetory' placeholder='Enter Last Name' required /></td>
                         </tr>
                         <tr>
                             <td className='w-25'><label htmlFor="designation">Designation:</label></td>
                             <td><input id="designation" name="designation" className='form-control' placeholder='Enter Designation' /></td>
                         </tr>
                         <tr>
-                            <td className='w-25'><label htmlFor="contact">Contact:</label></td>
-                            <td><input id="contact" name="contact" className='form-control' placeholder='Enter Contact' /></td>
+                            <td className='w-25'><label htmlFor="contact">Contact: <span className="fw-bold text-danger">*</span></label></td>
+                            <td><input id="contact" name="contact" className='form-control mandetory' placeholder='Enter Contact' required /></td>
                         </tr>
                         <tr>
-                            <td className='w-25'><label htmlFor="email">Email:</label></td>
-                            <td><input id="email" name="email" className='form-control' placeholder='Enter Email' /></td>
+                            <td className='w-25'><label htmlFor="email">Email: <span className="fw-bold text-danger">*</span></label></td>
+                            <td><input id="email" name="email" className='form-control mandetory' placeholder='Enter Email' required /></td>
                         </tr>
                         <tr>
-                            <td className='w-25'><label htmlFor="address">Address:</label></td>
-                            <td><textarea id="address" name="address" className='form-control w-100' placeholder='Enter Address' rows={4} ></textarea></td>
+                            <td className='w-25'><label htmlFor="address">Address: <span className="fw-bold text-danger">*</span></label></td>
+                            <td><textarea id="address" name="address" className='form-control w-100 mandetory' placeholder='Enter Address' rows={4} required ></textarea></td>
                         </tr>
                     </tbody>
                 </table>
@@ -117,7 +117,7 @@ const Form = () => {
                     </tfoot>
                 </table>
 
-                <h4 className='mt-5 text-center'>Educational Qualification :</h4>
+                <h4 className='mt-5 text-center'>Educational Qualification : <span className="fw-bold text-danger">*</span></h4>
                 <table className="table table-striped">
                     <tbody>
                         {
@@ -125,11 +125,11 @@ const Form = () => {
                                 return (
                                     <tr key={index}>
                                         <td>Qualification {index + 1}</td>
-                                        <td><input name={`qualification[${index}][degree]`} className='form-control' placeholder='Enter Qualification Degree  Eg. Graduation ,HS, etc' /></td>
-                                        <td><input name={`qualification[${index}][year]`} className='form-control' placeholder='Enter Year of Pass out' /></td>
-                                        <td><input name={`qualification[${index}][marks]`} className='form-control' placeholder='Enter Marks ' /></td>
-                                        <td><input name={`qualification[${index}][course]`} className='form-control' placeholder='Enter Course' /></td>
-                                        <td><input name={`qualification[${index}][institute]`} className='form-control' placeholder='Enter University / Board' /></td>
+                                        <td><input name={`qualification[${index}][degree]`} className='form-control mandetory' placeholder='Enter Qualification Degree  Eg. Graduation ,HS, etc' required /></td>
+                                        <td><input name={`qualification[${index}][year]`} className='form-control mandetory' placeholder='Enter Year of Pass out' required /></td>
+                                        <td><input name={`qualification[${index}][marks]`} className='form-control mandetory' placeholder='Enter Marks ' required /></td>
+                                        <td><input name={`qualification[${index}][course]`} className='form-control mandetory' placeholder='Enter Course' required /></td>
+                                        <td><input name={`qualification[${index}][institute]`} className='form-control mandetory' placeholder='Enter University / Board' required /></td>
                                     </tr>
                                 )
                             })
@@ -160,7 +160,7 @@ const Form = () => {
                     </tfoot>
                 </table>
 
-                <h4 className='mt-5 text-center'>Soft Skills :</h4>
+                <h4 className='mt-5 text-center'>Soft Skills : <span className="fw-bold text-danger">*</span></h4>
                 <table className="table table-striped">
                     <tbody>
                         {
@@ -168,7 +168,7 @@ const Form = () => {
                                 return (
                                     <tr key={index}>
                                         <td>Soft Skills {index + 1}</td>
-                                        <td><input name={`softSkills[${index}]`} className='form-control' placeholder='Enter Soft Skills ' /></td>
+                                        <td><input name={`softSkills[${index}]`} className='form-control mandetory' placeholder='Enter Soft Skills ' required /></td>
                                     </tr>
                                 )
                             })
@@ -180,7 +180,7 @@ const Form = () => {
                 </table>
 
 
-                <h4 className='mt-5 text-center'>Languages :</h4>
+                <h4 className='mt-5 text-center'>Languages : <span className="fw-bold text-danger">*</span></h4>
                 <table className="table table-striped">
                     <tbody>
                         {
@@ -188,7 +188,7 @@ const Form = () => {
                                 return (
                                     <tr key={index}>
                                         <td>Languages {index + 1}</td>
-                                        <td><input name={`languages[${index}]`} className='form-control' placeholder='Enter Languages You Speak' /></td>
+                                        <td><input name={`languages[${index}]`} className='form-control mandetory' placeholder='Enter Languages You Speak' required /></td>
                                     </tr>
                                 )
                             })
@@ -249,7 +249,7 @@ const Form = () => {
 
 
 
-                <h4 className='mt-5 text-center'>Hobby :</h4>
+                <h4 className='mt-5 text-center'>Hobby : <span className="fw-bold text-danger">*</span></h4>
                 <table className="table table-striped">
                     <tbody>
                         {
@@ -257,7 +257,7 @@ const Form = () => {
                                 return (
                                     <tr key={index}>
                                         <td>Hobby {index + 1}</td>
-                                        <td><input name={`hobbies[${index}]`} className='form-control' placeholder='Enter Hobbies or interests' /></td>
+                                        <td><input name={`hobbies[${index}]`} className='form-control mandetory' placeholder='Enter Hobbies or interests' required /></td>
                                     </tr>
                                 )
                             })
@@ -268,12 +268,12 @@ const Form = () => {
                     </tfoot>
                 </table>
 
-                <h4 className='mt-5 text-center'>Profile Summary :</h4>
+                <h4 className='mt-5 text-center'>Profile Summary : <span className="fw-bold text-danger">*</span></h4>
                 <table className="table table-striped">
                     <tbody>
                         <tr>
                             <td className='w-25'>Profile Summary</td>
-                            <td><textarea name="profileSummary" id="" rows={7} className='w-100 form-control' placeholder='Enter Profile Summary'></textarea></td>
+                            <td><textarea name="profileSummary" id="" rows={7} className='w-100 form-control mandetory' placeholder='Enter Profile Summary' required></textarea></td>
                         </tr>
                     </tbody>
                 </table>
