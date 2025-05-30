@@ -39,4 +39,9 @@ export const templates = [
     templateImage: "template8.png",
     templateUrl: "template8",
   },
+  {
+    templateTitle: "Template 9",
+    templateImage: "template9.png",
+    templateUrl: "template9",
+  },
 ];

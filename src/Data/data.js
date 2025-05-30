@@ -64,14 +64,16 @@ export const data = {
       year: "2022",
       marks: "7.7CGPA",
       course: "B.Com",
-      institute: "UNIVERSITY OF CALCUTTA",
+      headInstitute: "UNIVERSITY OF CALCUTTA",
+      institute: "Lalbaba College",
     },
     {
       degree: "Higher secondary",
       year: "2019",
       marks: "81.72%",
       course: "Commerce",
-      institute: "THE WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION",
+      headInstitute: "THE WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION",
+      institute: "Uttarpara Govt High School",
     },
   ],
   softSkills: [

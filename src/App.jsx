@@ -8,6 +8,7 @@ import Template5 from './Template/Template5'
 import Template6 from './Template/Template6'
 import Template7 from './Template/Template7'
 import Template8 from './Template/Template8'
+import Template9 from './Template/Template9'
 import TemplateListing from './TemplateListing'
 import UserContextProvider from './Context/UserContextProvider'
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/templates/template6" element={<Template6 />} />
             <Route path="/templates/template7" element={<Template7 />} />
             <Route path="/templates/template8" element={<Template8 />} />
+            <Route path="/templates/template9" element={<Template9 />} />
           </Routes>
         </BrowserRouter>
       </div>

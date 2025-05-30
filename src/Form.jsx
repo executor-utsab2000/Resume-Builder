@@ -7,12 +7,12 @@ import { useEffect } from 'react'
 const Form = () => {
 
     const [qualification, setQualification] = React.useState([0])
-    const [workExperience, setWorkExperience] = React.useState([0])
-    const [technicalSkills, setTechnicalSkills] = React.useState([0])
+    const [workExperience, setWorkExperience] = React.useState([])
+    const [technicalSkills, setTechnicalSkills] = React.useState([])
     const [softSkills, setSoftSkills] = React.useState([0])
     const [languages, setLanguages] = React.useState([0])
-    const [certificate, setCertificate] = React.useState([0])
-    const [project, setProject] = React.useState([0])
+    const [certificate, setCertificate] = React.useState([])
+    const [project, setProject] = React.useState([])
     const [hobbies, setHobbies] = React.useState([0])
 
     const { setUserData } = useContext(UserContext)
@@ -122,14 +122,15 @@ const Form = () => {
                         qualification.map((elm, index) => {
                             return (
                                 <>
-                                    <div className="qualificationItem">
+                                    <div className="qualificationItem mb-3">
                                         <div className="row">
-                                            <div className="col-lg-2 my-auto fw-bold">Qualification {index + 1}</div>
+                                            <div className="col-lg-12 my-auto fw-bold">Qualification {index + 1}</div>
                                             <div className="col-lg-2 my-auto"><input name={`qualification[${index}][degree]`} className='form-control mandetory' placeholder='Enter Qualification Degree  Eg. Graduation ,HS, etc' required /></div>
                                             <div className="col-lg-2 my-auto"><input name={`qualification[${index}][year]`} className='form-control mandetory' placeholder='Enter Year of Pass out' required /></div>
                                             <div className="col-lg-2 my-auto"><input name={`qualification[${index}][marks]`} className='form-control mandetory' placeholder='Enter Marks ' required /></div>
                                             <div className="col-lg-2 my-auto"><input name={`qualification[${index}][course]`} className='form-control mandetory' placeholder='Enter Course' required /></div>
-                                            <div className="col-lg-2 my-auto"><input name={`qualification[${index}][institute]`} className='form-control mandetory' placeholder='Enter University / Board' required /></div>
+                                            <div className="col-lg-2 my-auto"><input name={`qualification[${index}][institute]`} className='form-control mandetory' placeholder='Enter College / School' required /></div>
+                                            <div className="col-lg-2 my-auto"><input name={`qualification[${index}][headInstitute]`} className='form-control mandetory' placeholder='Enter University / Board' required /></div>
                                         </div>
                                     </div>
                                 </>
