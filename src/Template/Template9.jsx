@@ -30,18 +30,18 @@ const Template8 = () => {
                     <div className="leftDiv">
                         <div className="contentContainer">
                             <div className="address d-flex">
-                                <i class="fa-solid fa-location-dot my-auto"></i>
+                                <i className="fa-solid fa-location-dot my-auto"></i>
                                 <div>
                                     {userData.address}
                                 </div>
                             </div>
 
                             <div className="contactLinks mb-5">
-                                <p><i class="fa-solid fa-at"></i> {userData.email}</p>
-                                <p><i class="fa-solid fa-phone"></i> {userData.contact}</p>
-                                {userData.linkedin.trim().length !== 0 && <p><i class="fa-brands fa-linkedin"></i> {userData.linkedin}</p>}
-                                {userData.github.trim().length !== 0 && <p><i class="fa-brands fa-square-github"></i> {userData.github}</p>}
-                                {userData.portfolio.trim().length !== 0 && <p><i class="fa-solid fa-link"></i> {userData.portfolio}</p>}
+                                <p><i className="fa-solid fa-at"></i> {userData.email}</p>
+                                <p><i className="fa-solid fa-phone"></i> {userData.contact}</p>
+                                {userData.linkedin.trim().length !== 0 && <p><i className="fa-brands fa-linkedin"></i> {userData.linkedin}</p>}
+                                {userData.github.trim().length !== 0 && <p><i className="fa-brands fa-square-github"></i> {userData.github}</p>}
+                                {userData.portfolio.trim().length !== 0 && <p><i className="fa-solid fa-link"></i> {userData.portfolio}</p>}
                             </div>
 
                             {

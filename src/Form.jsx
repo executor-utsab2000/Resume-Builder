@@ -4,6 +4,7 @@ import setNestedObject from './JS/setNestedObject'
 import UserContext from './Context/UserContext'
 import { useEffect } from 'react'
 
+
 const Form = () => {
 
     const [qualification, setQualification] = React.useState([0])
@@ -27,7 +28,6 @@ const Form = () => {
         for (let [key, value] of formData.entries()) {
             setNestedObject(data, key, value);
         }
-        // console.log(data);
         setUserData(data);
         navigate('/template-listing');
     }
@@ -37,7 +37,7 @@ const Form = () => {
             <form onSubmit={submitForm} autoComplete='off'>
                 <section>
                     <h4 className='text-center'>Personal Details :</h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             <tr>
                                 <td colSpan={2}>
@@ -74,7 +74,7 @@ const Form = () => {
 
                 <section>
                     <h4 className='mt-5 text-center'>Links :</h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             <tr>
                                 <td className='w-25'><label htmlFor="github">Github</label></td>
@@ -92,7 +92,6 @@ const Form = () => {
                     </table>
                 </section>
 
-          
 
                 <section>
                     <h4 className='mt-5 text-center'>Work Experience :</h4>
@@ -113,7 +112,7 @@ const Form = () => {
                             </>
                         )
                     })}
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setWorkExperience([...workExperience, workExperience.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setWorkExperience([...workExperience, workExperience.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
                 <section>
@@ -137,13 +136,13 @@ const Form = () => {
                             )
                         })
                     }
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setQualification([...qualification, qualification.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setQualification([...qualification, qualification.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
 
                 <section>
                     <h4 className='mt-5 text-center'>Technical Skills :</h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             {
                                 technicalSkills.map((elm, index) => {
@@ -157,13 +156,13 @@ const Form = () => {
                             }
                         </tbody>
                     </table>
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setTechnicalSkills([...technicalSkills, technicalSkills.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setTechnicalSkills([...technicalSkills, technicalSkills.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
 
                 <section>
                     <h4 className='mt-5 text-center'>Soft Skills : <span className="fw-bold text-danger">*</span></h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             {
                                 softSkills.map((elm, index) => {
@@ -177,13 +176,13 @@ const Form = () => {
                             }
                         </tbody>
                     </table>
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setSoftSkills([...softSkills, softSkills.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setSoftSkills([...softSkills, softSkills.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
 
                 <section>
                     <h4 className='mt-5 text-center'>Languages : <span className="fw-bold text-danger">*</span></h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             {
                                 languages.map((elm, index) => {
@@ -197,7 +196,7 @@ const Form = () => {
                             }
                         </tbody>
                     </table>
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setLanguages([...languages, languages.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setLanguages([...languages, languages.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -218,7 +217,7 @@ const Form = () => {
                             )
                         })
                     }
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setCertificate([...certificate, certificate.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setCertificate([...certificate, certificate.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
 
@@ -241,14 +240,14 @@ const Form = () => {
                             )
                         })
                     }
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setProject([...project, project.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setProject([...project, project.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
 
 
                 <section>
                     <h4 className='mt-5 text-center'>Hobby : <span className="fw-bold text-danger">*</span></h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             {
                                 hobbies.map((elm, index) => {
@@ -262,12 +261,12 @@ const Form = () => {
                             }
                         </tbody>
                     </table>
-                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setHobbies([...hobbies, hobbies.length])}><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" className='btn btn-success mb-5 actionIcon' onClick={() => setHobbies([...hobbies, hobbies.length])}><i className="fa-solid fa-plus"></i></button>
                 </section>
 
                 <section>
                     <h4 className='mt-5 text-center'>Profile Summary : <span className="fw-bold text-danger">*</span></h4>
-                    <table className="table table-striped">
+                    <table className="table  ">
                         <tbody>
                             <tr>
                                 <td className='w-25'>Profile Summary</td>

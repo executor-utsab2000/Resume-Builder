@@ -13,7 +13,7 @@ const Template4 = () => {
     return (
         <>
             <div className="printBtnDiv">
-                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
             </div>
 
             <div className="container py-4 template4" ref={printContent}>

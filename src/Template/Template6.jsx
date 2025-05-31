@@ -12,16 +12,16 @@ const Template6 = () => {
     return (
         <>
             <div className="printBtnDiv">
-                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
             </div>
 
-            <div class="container template6" ref={printContent}>
-                <header class="top-section">
-                    <div class="left-header">
+            <div className="container template6" ref={printContent}>
+                <header className="top-section">
+                    <div className="left-header">
                         <h1>{userData.fName + " " + userData.lName}</h1>
-                        <p class="title">{userData.designation}</p>
+                        <p className="title">{userData.designation}</p>
                     </div>
-                    <div class="right-header">
+                    <div className="right-header">
                         <p>📧 {userData.email}</p>
                         <p>📞 {userData.contact}</p>
                         <p>📍 {userData.address}</p>
@@ -30,19 +30,19 @@ const Template6 = () => {
                     </div>
                 </header>
 
-                <section class="summary">
+                <section className="summary">
                     <p>{userData.profileSummary}</p>
                 </section>
 
-                <div class="content">
-                    <div class="left">
+                <div className="content">
+                    <div className="left">
                         <h2>Work Experience</h2>
                         {
                             userData.workExperience.map((elm) => {
                                 return (
-                                    <div class="job">
+                                    <div className="job">
                                         <h3>{elm.designation}</h3>
-                                        <p class="company text-capitalize">{elm.companyName} <span>{`${elm.startDate} - ${elm.endDate}`}</span></p>
+                                        <p className="company text-capitalize">{elm.companyName} <span>{`${elm.startDate} - ${elm.endDate}`}</span></p>
                                         <ul>
                                             {
                                                 elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
@@ -57,7 +57,7 @@ const Template6 = () => {
                         {
                             userData.project.map((elm) => {
                                 return (
-                                    <div class="job">
+                                    <div className="job">
                                         <h3>{elm.title}</h3>
                                         <p> {`${elm.startDate} - ${elm.endDate}`}</p>
                                         <div className="d-flex  ">
@@ -91,37 +91,37 @@ const Template6 = () => {
                         }
                     </div>
 
-                    <section class="right">
+                    <section className="right">
                         <h2>Skills</h2>
-                        <ul class="skills">
+                        <ul className="skills">
                             {
                                 userData.technicalSkills?.map(elm => <li>{elm}</li>)
                             }
                         </ul>
 
                         <h2>Certificates</h2>
-                        <ul class="certificates">
+                        <ul className="certificates">
                             {
                                 userData.certificate?.map(elm => <li>{elm.title} - {elm.issuedBy}</li>)
                             }
                         </ul>
 
                         <h2>Soft Skills</h2>
-                        <ul class="memberships">
+                        <ul className="memberships">
                             {
                                 userData.softSkills?.map(elm => <li>{elm}</li>)
                             }
                         </ul>
 
                         <h2>Languages</h2>
-                        <ul class="languages">
+                        <ul className="languages">
                             {
                                 userData.languages.map(elm => <li>{elm}</li>)
                             }
                         </ul>
 
                         <h2>Interests & Hobbies</h2>
-                        <ul class="hobbies">
+                        <ul className="hobbies">
                             {
                                 userData.hobbies?.map(elm => <li>{elm}</li>)
                             }

@@ -12,7 +12,7 @@ const Template8 = () => {
     return (
         <>
             <div className="printBtnDiv">
-                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i class="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
             </div>
 
             <div className=" container template8" ref={printContent}>
@@ -31,7 +31,7 @@ const Template8 = () => {
                                             <strong>{elm.designation}</strong>
                                             <span>{`${elm.startDate} - ${elm.endDate}`}</span>
                                         </div>
-                                        <div class="company">{elm.companyName}</div>
+                                        <div className="company">{elm.companyName}</div>
                                         <ul>
                                             {
                                                 elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
@@ -51,7 +51,7 @@ const Template8 = () => {
                                             <strong>{elm.title}</strong>
                                             <span>{`${elm.startDate} - ${elm.endDate}`}</span>
                                         </div>
-                                        <div class="company">
+                                        <div className="company">
                                             {
                                                 elm.techStacks.split(',')?.map(elm => `${elm} , `)
                                             }
