@@ -24,7 +24,7 @@ export const data = {
   email: "utsabsarkar00@gmail.com",
   fName: "Utsab",
   lName: "Sarkar",
-  designation: "Full Stack Developer",
+  designation: "Full Stack Developer Jr.",
   github: "github.com/executor- utsab2000",
   linkedin: "linkedin.com/in/utsab-sarkar- 971bb5184",
   portfolio: "utsab-dev.vercel.app/",

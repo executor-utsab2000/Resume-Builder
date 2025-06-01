@@ -8,12 +8,43 @@ import { handleDownloadPdf } from '../JS/handleDownloadPdf';
 const Template8 = () => {
     const { userData } = useContext(UserContext)
     const printContent = useRef(null)
+    const resumeName = useRef(null)
 
     return (
         <>
             <div className="printBtnDiv">
-                <button className="btn btn-primary" onClick={() => handleDownloadPdf(printContent)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                <label htmlFor="">Enter PDF Name :</label>
+                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
+                                <div className="text-danger">(Don't use '.pdf' provide only name)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+
 
             <div className="container template template9" ref={printContent}>
                 <div className="topLayer d-flex">

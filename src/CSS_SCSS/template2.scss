@@ -1,5 +1,21 @@
 .template2 {
+	min-width: 1200px;
+	max-width: 1200px;
 
+	.topItemContainer {
+		min-width: 1200px;
+		max-width: 1200px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		.topItems {
+			margin-bottom: 20px;
+			text-align: center;
+			min-width: 400px;
+			max-width: 400px;
+		}
+	}
 
 	.section-title {
 		font-weight: bold;
