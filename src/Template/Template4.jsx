@@ -35,7 +35,7 @@ const Template4 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                   <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -45,8 +45,6 @@ const Template4 = () => {
             </div>
 
 
-
-
             <div className="container py-4 template4" ref={printContent}>
                 <div className="text-start">
                     <h2 className="fw-bold">{userData.fName + " " + userData.lName}</h2>
@@ -54,13 +52,13 @@ const Template4 = () => {
                     <p>{userData.profileSummary}</p>
                 </div>
 
-                <div className="row text-start contact-icons mb-3">
-                    <div className="col-md-4 contact-item"><i className="bi bi-envelope-fill"></i> {userData.email}</div>
-                    <div className="col-md-4 contact-item"><i className="bi bi-telephone-fill"></i> {userData.contact}</div>
-                    <div className="col-md-4 contact-item"><i className="bi bi-geo-alt-fill"></i> {userData.address}</div>
-                    <div className="col-md-4 contact-item"><i className="bi bi-link-45deg"></i> {userData.portfolio}</div>
-                    <div className="col-md-4 contact-item"><i className="bi bi-linkedin"></i> {userData.linkedin}</div>
-                    <div className="col-md-4 contact-item"><i className="bi bi-medium"></i> {userData.github}</div>
+                <div className="contact-icons mb-3">
+                    <div className="contact-item"><i className="bi bi-envelope-fill"></i> {userData.email}</div>
+                    <div className="contact-item"><i className="bi bi-telephone-fill"></i> {userData.contact}</div>
+                    <div className="contact-item"><i className="bi bi-geo-alt-fill"></i> {userData.address}</div>
+                    <div className="contact-item"><i className="bi bi-link-45deg"></i> {userData.portfolio}</div>
+                    <div className="contact-item"><i className="bi bi-linkedin"></i> {userData.linkedin}</div>
+                    <div className="contact-item"><i className="bi bi-medium"></i> {userData.github}</div>
                 </div>
 
                 <div className="section-title">Areas of Expertise</div>
@@ -70,12 +68,14 @@ const Template4 = () => {
                     }
                 </div>
 
+
                 <div className="section-title">Soft SKills</div>
                 <div className="skills">
                     {
                         userData.softSkills?.map(elm => <span>{elm}</span>)
                     }
                 </div>
+
 
                 <div className="section-title">Work Experience</div>
                 <div className="sub-section mb-3">
@@ -88,7 +88,7 @@ const Template4 = () => {
                                     <div className="job-dates">{`${elm.startDate} - ${elm.endDate}`}</div>
                                     <ul>
                                         {
-                                            elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                            elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                         }
                                     </ul>
                                 </>
@@ -96,6 +96,7 @@ const Template4 = () => {
                         })
                     }
                 </div>
+
 
                 <div className="section-title">Projects</div>
                 <div className="sub-section mb-3">
@@ -106,13 +107,13 @@ const Template4 = () => {
                                     <div className="job-title">{elm.title}</div>
                                     <div className="skills">
                                         {
-                                            elm.techStacks.split(',')?.map(elm => <span>{elm}</span>)
+                                            elm.techStacks.split('//')?.map(elm => <span>{elm}</span>)
                                         }
                                     </div>
                                     <div className="job-dates">{`${elm.startDate} - ${elm.endDate}`}</div>
                                     <ul>
                                         {
-                                            elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                            elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
                                         }
                                     </ul>
                                 </>
@@ -120,6 +121,7 @@ const Template4 = () => {
                         })
                     }
                 </div>
+
 
                 <div className="section-title">Education</div>
                 {
@@ -174,7 +176,10 @@ const Template4 = () => {
 
 
 
+
             </div>
+
+
         </>
     )
 }

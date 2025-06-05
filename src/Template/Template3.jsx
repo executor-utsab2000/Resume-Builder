@@ -33,7 +33,7 @@ const Template3 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -93,7 +93,7 @@ const Template3 = () => {
                                                 <small className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</small>
                                                 <ul>
                                                     {
-                                                        elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                                        elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                                     }
                                                 </ul>
                                             </div>
@@ -112,14 +112,14 @@ const Template3 = () => {
                                                 <h5>{elm.title} -
                                                     <small className="text-muted">(
                                                         {
-                                                            elm.techStacks.split(',')?.map(elm => `${elm} , `)
+                                                            elm.techStacks.split('//')?.map(elm => `${elm} , `)
                                                         }
                                                         )</small>
                                                 </h5>
                                                 <small className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</small>
                                                 <ul>
                                                     {
-                                                        elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                                        elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
                                                     }
                                                 </ul>
                                             </div>

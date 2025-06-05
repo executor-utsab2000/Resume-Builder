@@ -4,16 +4,46 @@ $color_3: #dc3545;
 $font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $background-color_1: #dee2e6;
 
+
 .template4 {
+	min-width: 1200px;
+	max-width: 1200px;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: $font-family_1;
 	background: #fff;
 	color: $color_1;
 
+	.contact-icons {
+		min-width: 1200px;
+		max-width: 1200px;
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-around;
+
+		.contact-item {
+			margin-top: 10px;
+			min-width: 350px;
+			max-width: 350px;
+			display: flex;
+
+			i {
+				font-size: 1rem;
+				margin-right: 10px;
+				color: $color_3;
+			}
+		}
+	}
+
+
+
 	.section-title {
+		margin-top: 50px;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 1.2rem;
-		margin-top: 2rem;
 		margin-bottom: 1rem;
 		position: relative;
 		padding-left: 30px;
@@ -24,25 +54,6 @@ $background-color_1: #dee2e6;
 			left: 0;
 			color: $color_2;
 		}
-	}
-
-	.sub-section {
-		border-left: 3px solid #e4e4e4;
-		padding-left: 1rem;
-	}
-
-	.contact-icons {
-		i {
-			font-size: 1rem;
-			margin-right: 10px;
-			color: $color_3;
-		}
-	}
-
-	.contact-item {
-		display: flex;
-		align-items: center;
-		margin-bottom: 0.5rem;
 	}
 
 	.skills {
@@ -63,11 +74,27 @@ $background-color_1: #dee2e6;
 
 	.job-company {
 		font-style: italic;
+		text-transform: capitalize;
 	}
 
 	.job-dates {
 		color: $color_3;
 		font-size: 0.9rem;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

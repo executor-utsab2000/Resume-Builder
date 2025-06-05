@@ -34,7 +34,7 @@ const Template8 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -151,14 +151,14 @@ const Template8 = () => {
                                                             <div className="pe-2">
                                                                 <ul>
                                                                     {
-                                                                        elm.projectList.split(',')?.map(elm => <li>{elm}</li>)
+                                                                        elm.projectList.split('//')?.map(elm => <li>{elm}</li>)
                                                                     }
                                                                 </ul>
                                                             </div>
                                                             <div className="ps-2">
                                                                 <ul>
                                                                     {
-                                                                        elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                                                        elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                                                     }
                                                                 </ul>
                                                             </div>
@@ -183,13 +183,13 @@ const Template8 = () => {
                                                     <div className="duration">{`${elm.startDate} - ${elm.endDate}`}</div>
                                                     <div className="techStacks">
                                                         {
-                                                            elm.techStacks.split(',')?.map(elm => <span className="badge m-1 px-3 py-2 text-bg-secondary">{elm}</span>)
+                                                            elm.techStacks.split('//')?.map(elm => <span className="badge m-1 px-3 py-2 text-bg-secondary">{elm}</span>)
                                                         }
                                                     </div>
                                                     <div className="learnings">
                                                         <ul>
                                                             {
-                                                                elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                                                elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
                                                             }
                                                         </ul>
                                                     </div>

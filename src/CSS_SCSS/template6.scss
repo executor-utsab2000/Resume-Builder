@@ -2,6 +2,8 @@ $color_1: #333;
 $font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .template6 {
+	min-width: 1200px;
+	max-width: 1200px;
 
 	.top-section {
 		display: flex;
@@ -85,5 +87,17 @@ $font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		margin-bottom: 5px;
 	}
 
+	.job {
+
+		.jobLeft {
+			min-width: 700px;
+			max-width: 700px;
+		}
+
+		.jobRight {
+			min-width: 400px;
+			max-width: 400px;
+		}
+	}
 
 }

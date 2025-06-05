@@ -40,7 +40,7 @@ const Template1 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -121,7 +121,7 @@ const Template1 = () => {
                                                         <div className="header">Projects :</div>
                                                         <ul>
                                                             {
-                                                                elm.projectList.split(',')?.map(elm => <li>{elm}</li>)
+                                                                elm.projectList.split('//')?.map(elm => <li>{elm}</li>)
                                                             }
                                                         </ul>
                                                     </div>
@@ -131,7 +131,7 @@ const Template1 = () => {
                                                         <div className="header">Responsibilities :</div>
                                                         <ul>
                                                             {
-                                                                elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                                                elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                                             }
                                                         </ul>
                                                     </div>
@@ -161,7 +161,7 @@ const Template1 = () => {
                                                     <div className="header">Projects Tech Stacks:</div>
                                                     <ul>
                                                         {
-                                                            elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
+                                                            elm.techStacks.split('//')?.map(elm => <li>{elm}</li>)
                                                         }
                                                     </ul>
                                                 </div>
@@ -170,7 +170,7 @@ const Template1 = () => {
                                                 <div className="projectLearnings">
                                                     <ul>
                                                         {
-                                                            elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                                            elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
                                                         }
                                                     </ul>
                                                 </div>

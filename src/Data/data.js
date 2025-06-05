@@ -40,22 +40,23 @@ export const data = {
   languages: ["English", "Bengali", "Hindi"],
   project: [
     {
-      title: "Audio Corner",
-      startDate: "1st September 2023",
-      endDate: "15th October 2023",
-      liveLink: "https://utsab-dev.vercel.app/project/audioCorner",
+      title: "Expense Tracker",
+      startDate: "2nd February 2024",
+      endDate: "10th August 2024",
+      liveLink: "https://github.com/executor-utsab2000/To-Do-CURD--EmailVerfied-Login",
       learnings:
-        "Responsible for solving bugs and do the fixes , Implementing New Features like map routing , intl-tel-input(About A JavaScript plugin for entering and validating international telephone numbers) etc. , Handling tables by Javascript , Upgrade of site from PHP 5.6 to PHP 8.1 Version , Solving PHP and JavaScript bugs.",
-      techStacks: "HTML , CSS , JS , Jquery , Bootstrap",
+        "How user based Auth System works // Usage of PHP MAILER // How forget password works// Handling inputs by JS dynamically",
+      techStacks:
+        "HTML // CSS // JS // Jquery // Bootstrap // PHP// MYSQL //SASS ",
     },
     {
-      title: "Audio Corner",
+      title: "Gemini Clone",
       startDate: "1st September 2023",
-      endDate: "15th October 2023",
-      liveLink: "https://utsab-dev.vercel.app/project/audioCorner",
+      endDate: "15th September 2023",
+      liveLink: "https://gemini-clone-utsab.netlify.app/",
       learnings:
-        "Responsible for solving bugs and do the fixes , Implementing New Features like map routing , intl-tel-input(About A JavaScript plugin for entering and validating international telephone numbers) etc. , Handling tables by Javascript , Upgrade of site from PHP 5.6 to PHP 8.1 Version , Solving PHP and JavaScript bugs.",
-      techStacks: "HTML , CSS , JS , Jquery , Bootstrap",
+        "Implimentation of API in React  // Destructuring the response to a proper response by JS // State Management by Hooks ",
+      techStacks: "HTML // CSS // JS // React Js // Bootstrap // SCSS",
     },
   ],
   qualification: [
@@ -105,10 +106,10 @@ export const data = {
       companyName: "guild it solutions",
       designation: "Full Stack Web Developer Jr.",
       startDate: "6th November 2024",
-      endDate: "",
+      endDate: "Present",
       projectList: "Asia Do It , 55PlusExplorers  , Platinum Benifits",
       responsibilities:
-        "Responsible for solving bugs and do the fixes , Implementing New Features like map routing , intl-tel-input(About A JavaScript plugin for entering and validating international telephone numbers) etc. , Handling tables by Javascript , Upgrade of site from PHP 5.6 to PHP 8.1 Version , Solving PHP and JavaScript bugs.",
+        "Responsible for solving bugs and do the fixes // Implementing New Features like map routing , intl-tel-input(About A JavaScript plugin for entering and validating international telephone numbers) etc. // Handling tables by Javascript // Upgrade of site from PHP 5.6 to PHP 8.1 Version // Solving PHP and JavaScript bugs.",
     },
   ],
 };

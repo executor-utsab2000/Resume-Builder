@@ -7,6 +7,8 @@ $background-color_1: #fff;
 $background-color_2: #2c3e50;
 
 .template5 {
+	min-width: 1200px;
+	max-width: 1200px;
 	font-family: $font-family_1;
 	background-color: $background-color_1;
 	color: $color_1;
@@ -49,4 +51,16 @@ $background-color_2: #2c3e50;
 		margin-bottom: 0.5rem;
 	}
 
+	.projectBottom {
+		.leftPanel {
+			min-width: 800px;
+			max-width: 800px;
+			padding-right: 20px;
+		}
+		.rightPanel {
+			min-width: 400px;
+			max-width: 400px;
+			padding-right: 20px;
+		}
+	}
 }

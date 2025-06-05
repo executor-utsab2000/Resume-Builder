@@ -33,7 +33,7 @@ const Template7 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -43,7 +43,7 @@ const Template7 = () => {
             </div>
 
 
-            
+
 
             <div className='container resume template7' ref={printContent}>
                 <div>
@@ -67,7 +67,7 @@ const Template7 = () => {
                                         <p><strong>{elm.designation}</strong></p>
                                         <ul>
                                             {
-                                                elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                                elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                             }
                                         </ul>
                                     </div>
@@ -91,12 +91,12 @@ const Template7 = () => {
                                         <div className="d-flex ">
                                             <ul className='pe-5'>
                                                 {
-                                                    elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
+                                                    elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
                                                 }
                                             </ul>
                                             <ul className='ps-5'>
                                                 {
-                                                    elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
+                                                    elm.techStacks.split('//')?.map(elm => <li>{elm}</li>)
                                                 }
                                             </ul>
                                         </div>

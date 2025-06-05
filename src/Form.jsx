@@ -105,8 +105,8 @@ const Form = () => {
                                         <div className="col-lg-2 my-auto"><input name={`workExperience[${index}][companyName]`} className='form-control' placeholder='Enter Company Name' /></div>
                                         <div className="col-lg-2 my-auto"><input name={`workExperience[${index}][startDate]`} className='form-control' placeholder='Enter Start Date ' /></div>
                                         <div className="col-lg-2 my-auto"><input name={`workExperience[${index}][endDate]`} className='form-control' placeholder='Enter Resign Date' /></div>
-                                        <div className="col-lg-2 my-auto"><textarea name={`workExperience[${index}][projectList]`} id="" rows={4} className='w-100 form-control' placeholder='Enter Projects List / use comma separator to  separate projects'></textarea></div>
-                                        <div className="col-lg-2 my-auto"><textarea name={`workExperience[${index}][responsibilities]`} id="" rows={4} className='w-100 form-control' placeholder='Enter Responsibilities / use comma separator to  separate responsibilities'></textarea></div>
+                                        <div className="col-lg-2 my-auto"><textarea name={`workExperience[${index}][projectList]`} id="" rows={4} className='w-100 form-control' placeholder='Enter Projects List / use " // " separator to  separate projects'></textarea></div>
+                                        <div className="col-lg-2 my-auto"><textarea name={`workExperience[${index}][responsibilities]`} id="" rows={4} className='w-100 form-control' placeholder='Enter Responsibilities / use " // " separator to  separate responsibilities'></textarea></div>
                                     </div>
                                 </div>
                             </>
@@ -233,8 +233,8 @@ const Form = () => {
                                         <div className="col-lg-2 my-auto"><input name={`project[${index}][startDate]`} className='form-control' placeholder='Start Date' /></div>
                                         <div className="col-lg-2 my-auto"><input name={`project[${index}][endDate]`} className='form-control' placeholder='End Date' /></div>
                                         <div className="col-lg-2 my-auto"><input name={`project[${index}][liveLink]`} className='form-control' placeholder='Live Link(if any)' /></div>
-                                        <div className="col-lg-2 my-auto"><textarea name={`project[${index}][learnings]`} id="" rows={4} className='w-100 form-control' placeholder='Learning use comma to sepatate learnings'></textarea></div>
-                                        <div className="col-lg-2 my-auto"><textarea name={`project[${index}][techStacks]`} id="" rows={4} className='w-100 form-control' placeholder='Tech Stacks use comma to sepatate'></textarea></div>
+                                        <div className="col-lg-2 my-auto"><textarea name={`project[${index}][learnings]`} id="" rows={4} className='w-100 form-control' placeholder='Learning  use " // " to sepatate learnings'></textarea></div>
+                                        <div className="col-lg-2 my-auto"><textarea name={`project[${index}][techStacks]`} id="" rows={4} className='w-100 form-control' placeholder='Tech Stacks  use " // " to sepatate'></textarea></div>
                                     </div>
                                 </div>
                             )

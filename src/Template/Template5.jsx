@@ -34,7 +34,7 @@ const Template5 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -43,11 +43,7 @@ const Template5 = () => {
                 </div>
             </div>
 
-
-
-
             <div className='container template5' ref={printContent}>
-
                 <div className="text-start">
                     <div className="name">{userData.fName + " " + userData.lName}</div>
                     <div className="title">{userData.designation}</div>
@@ -65,7 +61,6 @@ const Template5 = () => {
                     <div className="info-item"><span>Medium:</span>{userData.github}</div>
                 </div>
 
-
                 <div className="section-title">AREAS OF EXPERTISE</div>
                 <ul>
                     {
@@ -82,7 +77,7 @@ const Template5 = () => {
                                 <p><strong>{elm.designation}</strong> - <span className='text-capitalize'>{elm.companyName}</span> <span className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</span></p>
                                 <ul>
                                     {
-                                        elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                        elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                     }
                                 </ul>
                             </>
@@ -96,17 +91,21 @@ const Template5 = () => {
                         return (
                             <>
                                 <p><strong>{elm.title}</strong> - <span className="text-muted">{`${elm.startDate} - ${elm.endDate}`}</span></p>
-                                <div className="d-flex  ">
-                                    <ul className='pe-5'>
-                                        {
-                                            elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
-                                        }
-                                    </ul>
-                                    <ul className='ps-5'>
-                                        {
-                                            elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
-                                        }
-                                    </ul>
+                                <div className="d-flex projectBottom">
+                                    <div className="leftPanel">
+                                        <ul className='pe-5'>
+                                            {
+                                                elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div className="rightPanel">
+                                        <ul className='ps-5'>
+                                            {
+                                                elm.techStacks.split('//')?.map(elm => <li>{elm}</li>)
+                                            }
+                                        </ul>
+                                    </div>
                                 </div>
                             </>
                         )
@@ -157,7 +156,26 @@ const Template5 = () => {
                         })
                     }
                 </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
+
+
+
+
         </>
     )
 }

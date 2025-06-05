@@ -34,7 +34,7 @@ const Template6 = () => {
                         >
                             <div class="accordion-body">
                                 <label htmlFor="">Enter PDF Name :</label>
-                                <input type="text" className="form-control" ref={resumeName} value={'Resume'} />
+                                <input type="text" className="form-control" ref={resumeName} />
                                 <button className="btn btn-success" onClick={() => handleDownloadPdf(printContent, resumeName.current.value)}> <i className="fa-solid fa-file-pdf me-2"></i>Save As PDF</button>
                                 <div className="text-danger">(Don't use '.pdf' provide only name)</div>
                             </div>
@@ -76,7 +76,7 @@ const Template6 = () => {
                                         <p className="company text-capitalize">{elm.companyName} <span>{`${elm.startDate} - ${elm.endDate}`}</span></p>
                                         <ul>
                                             {
-                                                elm.responsibilities.split(',')?.map(elm => <li>{elm}</li>)
+                                                elm.responsibilities.split('//')?.map(elm => <li>{elm}</li>)
                                             }
                                         </ul>
                                     </div>
@@ -88,20 +88,24 @@ const Template6 = () => {
                         {
                             userData.project.map((elm) => {
                                 return (
-                                    <div className="job">
+                                    <div className="jobContainer">
                                         <h3>{elm.title}</h3>
                                         <p> {`${elm.startDate} - ${elm.endDate}`}</p>
-                                        <div className="d-flex  ">
-                                            <ul className='pe-5'>
-                                                {
-                                                    elm.learnings.split(',')?.map(elm => <li>{elm}</li>)
-                                                }
-                                            </ul>
-                                            <ul className='ps-5'>
-                                                {
-                                                    elm.techStacks.split(',')?.map(elm => <li>{elm}</li>)
-                                                }
-                                            </ul>
+                                        <div className="d-flex job">
+                                            <div className="jobLeft">
+                                                <ul className='pe-5'>
+                                                    {
+                                                        elm.learnings.split('//')?.map(elm => <li>{elm}</li>)
+                                                    }
+                                                </ul>
+                                            </div>
+                                            <div className="jobRight">
+                                                <ul className='ps-5'>
+                                                    {
+                                                        elm.techStacks.split('//')?.map(elm => <li>{elm}</li>)
+                                                    }
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 )
