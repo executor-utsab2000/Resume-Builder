@@ -43,7 +43,8 @@ export const data = {
       title: "Expense Tracker",
       startDate: "2nd February 2024",
       endDate: "10th August 2024",
-      liveLink: "https://github.com/executor-utsab2000/To-Do-CURD--EmailVerfied-Login",
+      liveLink:
+        "https://github.com/executor-utsab2000/To-Do-CURD--EmailVerfied-Login",
       learnings:
         "How user based Auth System works // Usage of PHP MAILER // How forget password works// Handling inputs by JS dynamically",
       techStacks:
@@ -110,6 +111,15 @@ export const data = {
       projectList: "Asia Do It , 55PlusExplorers  , Platinum Benifits",
       responsibilities:
         "Responsible for solving bugs and do the fixes // Implementing New Features like map routing , intl-tel-input(About A JavaScript plugin for entering and validating international telephone numbers) etc. // Handling tables by Javascript // Upgrade of site from PHP 5.6 to PHP 8.1 Version // Solving PHP and JavaScript bugs.",
+    },
+    {
+      companyName: "",
+      designation: "FreeLancing",
+      startDate: "11th November 2023",
+      endDate: "20th December 2023",
+      projectList: ",",
+      responsibilities:
+        "Was responsible for UI Design // Making the design approve by Client // managing the whole website single-handed",
     },
   ],
 };
